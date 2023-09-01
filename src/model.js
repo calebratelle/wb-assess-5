@@ -17,7 +17,7 @@ export class Human extends Model {
 Human.init(
   {
     human_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.integer,
       allowNull: false,
       primaryKey: true,
     },
@@ -71,7 +71,7 @@ Animal.init(
   },
 );
 
-Human.hasMany(Animal, { foreignKey: 'human_id' });
-Animal.belongsTo(Human, { foreignKey: 'human_id' });
+Human.hasMany(Animal, { foreignKey: 'humanId' });
+Animal.belongsTo(Human, { foreignKey: 'humanId' });
 
 export default db;
