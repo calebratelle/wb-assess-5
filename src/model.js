@@ -16,21 +16,21 @@ export class Human extends Model {
 
 Human.init(
   {
-    human_id: {
-      type: DataTypes.integer,
+    humanId: {
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
     },
     fname: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     lname: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     email: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
@@ -48,20 +48,24 @@ export class Animal extends Model {
 
 Animal.init(
   {
-    animal_id: {
+    animalId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
     },
+    humanId:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     name: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     species: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    birth_year: {
+    birthYear: {
       type: DataTypes.INTEGER,
     },
   },

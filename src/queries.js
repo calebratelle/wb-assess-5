@@ -7,7 +7,7 @@ export const query1 = await Human.findByPk(2);
 
 // Get the first animal whose species is "fish"
 
-export const query2 = await Animal.findAll({
+export const query2 = await Animal.findOne({
     where: {
       species: 'fish'
     }
@@ -33,7 +33,7 @@ export const query5 = await Human.findAll({
 // Get all the animals who don't have a birth year
 export const query6 = await Animal.findAll({
     where: {
-        birth_year: NULL
+        // birth_year: NULL
     }
 });
 
@@ -49,7 +49,7 @@ export const query7 = await Animal.findAll({
 // Get all the humans who DON'T have an email address that contains "gmail"
 export const query8 = await Human.findAll({
     where: {
-        [Op.not]: {email:[Op.like]: '%gmail%'}
+        // [Op.not]: {email:[Op.like]: '%gmail%'}
     }
 })
 
